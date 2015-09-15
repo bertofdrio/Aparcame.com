@@ -1,0 +1,94 @@
+<% content_for :custom_javascript do %>
+    <%= javascript_include_tag "date", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "calendar", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "calendar_availability", 'data-turbolinks-track' => true %>
+<% end %>
+
+<div id="navegador" class="navegador">
+
+</div>
+
+<div id="selector">
+
+  <h2><%= I18n.t('views.calendar.select_rents') %></h2>
+
+  <div id="days_table" class="calendario">
+    <H3><%= I18n.t('views.calendar.month_days') %></H3>
+    <TABLE BORDER="1">
+    </TABLE>
+  </div>
+
+  <div class="selector-actions">
+    <button class="button-secondary pure-button" onClick="seleccionarFinesSemana()"><%= I18n.t('views.calendar.weekends') %></button>
+    <button class="button-secondary pure-button" onClick="seleccionarLaborables()"><%= I18n.t('views.calendar.workingdays') %></button>
+    <button class="button-secondary pure-button" onClick="seleccionarTodos()"><%= I18n.t('views.calendar.alldays') %></button>
+    <button class="button-secondary pure-button" onclick="cleanSelection()"><%= I18n.t('views.calendar.clean') %></button>
+  </div>
+
+  <div id="horas" class="calendario">
+    <H3><%= I18n.t('views.calendar.day_hours') %></H3>
+
+    <TABLE BORDER="1">
+      <TR>
+        <% for hora in (0..23) %>
+            <TH colspan="4"><%= hora %></TH>
+        <% end %>
+      </TR>
+      <TR>
+        <% (1..96).each do %>
+            <TD></TD>
+        <% end %>
+      </TR>
+    </TABLE>
+  </div>
+
+  <div class="rent-actions">
+
+    <label for="rent"><%= I18n.t('text.general.rent') %>:</label>
+    <%= select_tag "rent", options_from_collection_for_select(@carpark.rents.collect, "id", "name") %>
+
+    <button class="button-success pure-button" onclick="saveAvailabilities('<%= @carpark.id %>')"><i class="fa fa-floppy-o"></i> <%= I18n.t('views.calendar.save_availabilities') %></button>
+  </div>
+</div>
+
+
+
+<div id="calendario">
+  <h2><%= I18n.t('views.calendar.month_config') %></h2>
+
+  <div class="calendario">
+    <TABLE BORDER="1">
+
+    </TABLE>
+  </div>
+
+  <ul class="legend">
+    <li><span class="no-disponible">No disponible</span></li>
+    <li><span class="disponible">Disponible</span></li>
+    <li><span class="mireserva">Mi reserva</span></li>
+    <li><span class="pagada">Pagada</span></li>
+    <li><span class="reservada">Reservada</span></li>
+  </ul>
+
+  <div class="calendar-actions">
+    <a class="button-error pure-button" onclick="clearAvailabilities()" data-confirm="Are you sure?"> <%= I18n.t('views.calendar.delete_availabilities') %></a>
+    <a class="button-error pure-button" onclick="clearMonthAvailabilities()" data-confirm="Are you sure?"> <%= I18n.t('views.calendar.delete_month_availabilities') %></a>
+  </div>
+
+</div>
+
+</br>
+<a class="pure-button" href="<%= carpark_path %>"><i class="fa fa-eye fa-3x"></i> <%= I18n.t('text.general.show') %></a>
+<a class="pure-button" href="<%= carparks_path%>"><i class="fa fa-reply fa-3x"></i> <%= I18n.t('text.general.back') %></a>
+
+
+
+<script>
+    $( document ).ready(function() {
+        console.log( "Calendar ready!" );
+        onInit();
+        refreshCalendar("<%= carpark_path %>");
+    });
+</script>
+
+

@@ -1,0 +1,11 @@
+<% if item.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= I18n.t('text.error.model_errors', :count => item.errors.count) %>:</h2>
+
+    <ul>
+    <% item.errors.full_messages.each do |msg| %>
+      <li>- <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

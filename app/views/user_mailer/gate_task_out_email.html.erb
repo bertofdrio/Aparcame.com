@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+
+<h1>Reserva finalizada</h1>
+
+<p>
+Le recordamos que su reserva ha finalizado a las <%= @booking_time.fixed_end_time.strftime("%T") %>,
+si no ha abandonado la plaza póngase en contacto con el número de teléfono: XXXXXXXXX.
+</p>
+
+<%= render :partial => 'booking_email' %>
+
+<%= render :partial => 'booking_client_email' %>
+
+</body>
+</html>
+
+
+

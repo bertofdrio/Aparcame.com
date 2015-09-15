@@ -1,0 +1,5 @@
+<% if @carpark.valid? %>
+    $("#error_explanation").remove()
+<% else %>
+    <%= (render :partial => 'shared/error_messages', :locals => { :item => @carpark }) %>
+<% end %>

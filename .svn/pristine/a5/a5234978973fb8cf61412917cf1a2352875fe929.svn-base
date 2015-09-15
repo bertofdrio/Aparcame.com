@@ -1,0 +1,30 @@
+<h1><%= Transaction.model_name.human(count: :many) %></h1>
+
+<table class="pure-table">
+  <thead>
+    <th><%= I18n.t('views.transactions.date') %></th>
+    <th><%= I18n.t('views.transactions.type') %></th>
+    <th><%= I18n.t('views.transactions.status') %></th>
+    <th><%= I18n.t('views.transactions.description') %></th>
+    <th><%= I18n.t('views.transactions.amount') %></th>
+  </thead>
+
+  <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.created_at %></td>
+        <td><%= I18n.translate("movement_type.#{transaction.movement_type}") %></td>
+        <td><%= transaction.status %></td>
+        <td><%= transaction.description %></td>
+        <td><%= number_to_euros(transaction.amount) %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+
+<p><%= I18n.t('views.transactions.current_balance') %> <strong> <%= number_to_euros(current_user.balance) %> </strong> </p>
+
+<br/>
+
+<a class="pure-button" href="<%= new_transaction_path()%>"><i class="fa fa-plus-circle fa-3x"></i></i> <%= I18n.t('views.transactions.topup_balance') %></a>
+<a class="pure-button" href="<%= withdraw_balance_transactions_path()%>"><i class="fa fa-plus-circle fa-3x"></i></i> <%= I18n.t('views.transactions.withdraw_balance') %></a>

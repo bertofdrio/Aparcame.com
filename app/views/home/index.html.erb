@@ -1,0 +1,66 @@
+<% content_for :custom_javascript do %>
+    <%= javascript_include_tag "address_converter", 'data-turbolinks-track' => true %>
+<% end %>
+
+<% if user_signed_in? %>
+    <div>
+      <p><%= I18n.t('views.transactions.current_balance') %>
+        <strong> <%= number_to_euros(current_user.balance) %></strong></p>
+    </div>
+
+    <br>
+
+    <% if !@booking_times.nil? and @booking_times.count > 0 %>
+
+        <h1><%= I18n.t('views.home.next_bookings') %></h1>
+
+
+        <table class="pure-table">
+          <thead>
+          <tr>
+            <th><%= I18n.t('views.bookings.address') %></th>
+            <th><%= I18n.t('views.booking_times.start_time') %></th>
+            <th>#</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @booking_times.each do |booking_time| %>
+              <tr>
+                <td><address><%= "%s, %s, %s" % [booking_time.booking.carpark.garage.address, booking_time.booking.carpark.garage.city, booking_time.booking.carpark.garage.province.name] %></address></td>
+                <td><%= booking_time.start_time %></td>
+                <td>
+                  <a class="pure-button" href="<%= carpark_path(booking_time.booking.carpark) %>"><i class="fa fa-eye"></i> <%= I18n.t('text.general.carpark') %>
+                  </a></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    <% end %>
+<% else %>
+    <div id="init">
+
+      <div id="description">
+
+        <p id="registerbutton">
+          <%= link_to image_tag("login-button.png") + I18n.t('text.general.login'), new_session_path('user') %>
+          <%= link_to image_tag("reg-button.png") + I18n.t('text.general.sign_up'), new_registration_path('user') %>
+        </p>
+
+        <p>¿Has pensado que mientras das vueltas y vueltas buscando
+          aparcamiento existen gran cantidad de <strong>plazas vacías</strong>
+          en garajes privados cerca de ese lugar?<br/>
+          ¿Te interesaría <strong>alquilar tu plaza</strong> de garaje durante el tiempo que
+          estás en el trabajo?</p>
+
+        <p class="main" id="main"><span class="trade">aparcame.com</span>
+          ofrece un sistema de <strong>búsqueda, reserva y acceso a plazas de
+          garaje</strong>, durante el tiempo que no estén ocupadas por sus
+          propietarios, de una forma <strong>cómoda y segura</strong>.
+        </p>
+
+        <p id="phone">Llámanos al 984 11 37 63</p>
+      </div>
+
+    </div>
+<% end %>

@@ -1,0 +1,13 @@
+<%= form_for [@carpark, @rent] do |f| %>
+    <%= render :partial => 'shared/error', :locals => {:item => @rent} %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+

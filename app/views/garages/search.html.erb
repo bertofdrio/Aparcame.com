@@ -1,0 +1,59 @@
+<p>
+  <%= form_tag garages_path, :method => :get, :remote => true do -%>
+      <%= text_field_tag :search_address, @search_address, size: 60 %>
+      <button type="submit" remote="true" class="pure-button"><i class="fa fa-search"></i>   <%= I18n.t('text.general.search') %></button>
+  <%- end -%>
+
+  <% unless @alternate_addresses.blank?  %>
+      <br />
+      <%= I18n.t('text.general.did_you_mean') %>:
+      <% @alternate_addresses.each do |alternate_address| %>
+          <%= form_tag garages_path, :method => :get, remote: true do -%>
+              <%= hidden_field_tag :search_address, alternate_address  %>
+              <button type="submit" remote="true" class="pure-button"><i class="fa fa-search"></i> <%=alternate_address%></button>
+          <%- end -%>
+      <%- end -%>
+
+      <br />
+  <%- end -%>
+</p>
+
+<div style=''>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log('initialize gmaps');
+        handler = Gmaps.build('Google');
+        handler.buildMap({provider: {}, internal: {id: 'map'}}, function () {
+            markers = handler.addMarkers(<%= raw @hash.to_json %>);
+
+            <% if @has_garages != nil and @has_garages.count > 0 %>
+                console.log('Setting bounds')
+                var p1 = new google.maps.LatLng(<%= @lat1 %>, <%= @lng1 %>);
+                var p2 = new google.maps.LatLng(<%= @lat2 %>, <%= @lng2 %>);
+                var bounds = new google.maps.LatLngBounds();
+                bounds.extend(p1)
+                bounds.extend(p2)
+                handler.getMap().setZoom(14);
+            <% else %>
+                if (markers.length != 0) {
+                    handler.bounds.extendWith(markers);
+                    handler.fitMapToBounds();
+                }
+            <% end %>
+
+            <% if @search_address != nil %>
+                console.log('Search_address exists')
+                handler.getMap().setCenter({lat: <%= @lat %>, lng:<%= @lng %>});
+            <% end  %>
+        });
+    });
+</script>
+
+<% if !connected?  %>
+    <% @garages.each do |garage| %>
+        <%= link_to garage.name, garage_path(garage) %>
+    <% end  %>
+<% end  %>

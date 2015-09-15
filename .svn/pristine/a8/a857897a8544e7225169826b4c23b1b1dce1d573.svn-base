@@ -1,0 +1,31 @@
+<h1><%= Rent.model_name.human %> <%= @rent.name %></h1>
+<p>
+  <b><%= Rent.human_attribute_name(:carpark_id) %></b>
+  <%= @rent.carpark.id %>
+</p>
+
+<h3><%= Availability.model_name.human(count: :many) %></h3>
+<table class="pure-table">
+  <thead>
+  <tr>
+    <th><%= I18n.t('views.rent.date') %></th>
+    <th><%= Availability.human_attribute_name(:start_time) %></th>
+    <th><%= Availability.human_attribute_name(:end_time) %></th>
+    <th>#</th>
+  </tr>
+  </thead>
+  <tbody>
+<% @availabilities.each do |availability| %>
+  <tr>
+    <td><%= availability.start_time.to_date %></td>
+    <td><%= availability.start_time.strftime("%T") %></td>
+    <td><%= availability.fixed_end_time.strftime("%T") %></td>
+    <td><a class="pure-button" href="<%= carpark_rent_availability_path(@carpark, @rent, availability)%>"  data-method="delete" data-confirm="<%= I18n.t('text.general.are_you_sure') %>"><i class="fa fa-trash-o"></i> <%= I18n.t('text.general.delete') %></a></td>
+<% end %>
+  </tbody>
+</table>
+
+<br>
+<a class="pure-button" href="<%= calendar_carpark_path(@carpark)%>"><i class="fa fa-calendar fa-3x"></i> <%= I18n.t('text.general.calendar') %></a>
+<a class="pure-button" href="<%= carpark_rent_path(@carpark, @rent)%>"  data-method="delete"><i class="fa fa-trash fa-3x"></i> <%= I18n.t('text.general.delete') %></a>
+<a class="pure-button" href="<%= carpark_rents_path %>"><i class="fa fa-reply fa-3x"></i> <%= I18n.t('text.general.back') %></a>

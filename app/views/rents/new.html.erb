@@ -1,0 +1,5 @@
+<h1><%= t('text.general.new_model', :name => Rent.model_name.human.downcase) %></h1>
+
+<%= render 'form' %>
+
+<a class="pure-button" href="<%= _back_url %>"><i class="fa fa-reply fa-3x"></i> <%= I18n.t('text.general.back') %></a>

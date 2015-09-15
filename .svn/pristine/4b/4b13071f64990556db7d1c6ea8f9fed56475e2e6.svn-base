@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+
+<h1>Información de reserva</h1>
+
+<p>
+Le recordamos que ya puede acceder a la plaza reservada realizando una llamada perdida al número de teléfono
+<%= @booking.phone %> a partir de <%= @booking_time.start_time.strftime("%T") %>.
+</p>
+
+<p>
+Su reserva finaliza a las <strong><%= @booking_time.fixed_end_time.strftime("%T") %></strong>, debe abandonar la plaza antes de la hora indicada.
+</p>
+
+<%= render :partial => 'booking_email' %>
+
+<%= render :partial => 'booking_client_email' %>
+
+</body>
+</html>
+
+
+

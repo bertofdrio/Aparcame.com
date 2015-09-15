@@ -1,0 +1,21 @@
+<h1><%= I18n.t('views.transactions.withdraw_balance') %></h1>
+
+<p><%= I18n.t('views.transactions.current_balance') %> <%= number_to_euros(current_user.balance) %></p>
+<p><%= I18n.t('views.transactions.not_committed_balance') %> <%= number_to_euros(current_user.not_committed_balance) %></p>
+
+<%= form_for @transaction, url: { action: "withdraw_balance_create" } do |f| %>
+    <%= render :partial => 'shared/error', :locals => { :item => @transaction } %>
+
+    <div class="field">
+      <%= f.label :amount %><br>
+      <%= f.text_field :amount %>
+    </div>
+
+    <div class="actions">
+      <button type="submit" name="commit" action class="button-success pure-button"><i class="fa fa-floppy-o"></i> <%= I18n.t('views.transactions.withdraw_balance') %>
+      </button>
+    </div>
+
+<% end %>
+
+<a class="pure-button" href="<%= transactions_path %>"><i class="fa fa-reply fa-3x"></i> <%= I18n.t('text.general.back') %></a>

@@ -1,0 +1,6 @@
+<p>
+  <h3>Información de garaje y plaza:</h3>
+Dirección: <%= @garage.address %>, <%= @garage.city %>, <%= @garage.province.name %><br>
+Plaza: <%= @carpark.number %>, <%= @carpark.description %><br>
+</p>
+

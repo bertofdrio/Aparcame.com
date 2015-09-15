@@ -1,0 +1,285 @@
+.form-disponibilidad {
+
+}
+
+.fs-index {
+	margin-bottom: 10px;
+	text-align: center;
+	width: 95%;
+}
+
+.fs-child {
+	margin-bottom: 10px;
+	width: 40%;
+	display: inline;
+}
+
+
+
+.navegador {
+	text-align: center;
+	font-size: 16px;
+	margin: 0 0 10px 5px;
+}
+
+.navegador-titulo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navegador a {
+    color: white;
+    font-size: 8pt;
+    padding: 7px 20px;
+    margin: 0 5px;
+    text-align: left;
+    background-image: image_url("calendar_button.png");
+    background-repeat: no-repeat;
+    width:600px;
+}
+
+h2 {
+  margin-top: 0;
+}
+div#calendario {
+  overflow: auto;
+  margin-top: 20px;
+  border: groove;
+  padding: 5px;
+}
+
+.calendario
+{
+  overflow: auto;
+}
+
+//h2 {
+//  width: 98%;
+//  margin: 10px;
+//  padding: 0;
+//  text-align: center;
+//}
+//
+//h2:after {
+//  display: inline-block;
+//  margin: 0 0 8px 20px;
+//  height: 3px;
+//  content: " ";
+//  text-shadow: none;
+//  background-color: #999;
+//  width: 140px;
+//}
+//
+//h2:before {
+//  display: inline-block;
+//  margin: 0 20px 8px 0;
+//  height: 3px;
+//  content: " ";
+//  text-shadow: none;
+//  background-color: #999;
+//  width: 140px;
+//}
+
+//div#calendario h3 {
+////  position: relative;
+////  top: -20px;
+//  background-color: white;
+//    margin-top: -20px;
+////  display:inline-block;
+//}
+
+.calendario table {
+	//margin: 5px;
+	padding: 0px;
+	outline-width: 0;
+	border-collapse: collapse;
+	width: 98%;
+    table-layout:fixed;
+}
+
+.calendario th, .month th {
+   background-color: #d0e6ff;
+}
+
+.calendario th:nth-child(even), .month th:nth-child(even) {
+    background-color: #a6b8cd;
+}
+
+.calendario th.weekend, .month th.weekend {
+   background-color: #ffa9b7;
+}
+
+.calendario tr, .legend .no-disponible, .month tr {
+   background-color: #bebebe;
+   background-image: image_url("gradient1.png");
+   background-repeat: no-repeat;
+   background-position: 2ex 0;
+}
+
+.calendario tr:nth-child(even), .month tr:nth-child(even) {
+    background-color: #a6a6a6;
+    background-image: image_url("gradient2.png");
+}
+
+.calendario th, .calendario td, .month th, .month td {
+  width: 10px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: #797979;
+}
+
+.month th {
+  font-size: 9px;
+}
+
+.calendario th {
+	font-size: 9px;
+}
+
+.calendario th:not(:first-child) {
+  border-left-width: medium;
+}
+
+.calendario td.initHourCell
+{
+  border-left-width: medium;
+}
+
+.calendario td.day, th.day
+{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.calendario td.disponible, .legend .disponible, .month td.disponible {
+    background-color: #70d103;
+//    border-color: #87d842;
+}
+
+.calendario tr:nth-child(even) td.disponible {
+    background-color: #63b707;
+//    border-color: #76bd39;
+}
+
+.calendario td.neutro, .legend .neutro {
+    background-color: #657b36;
+    cursor: not-allowed;
+}
+
+.calendario tr:nth-child(even) td.neutro {
+    background-color: #596c30;
+}
+
+.calendario td.no-disponible, .legend .no-disponible {
+    cursor: not-allowed;
+}
+
+.calendario td.reservada, .legend .reservada {
+    background-color: orange;
+}
+
+.calendario td.mireserva, .legend .mireserva {
+    background-color: yellow;
+}
+
+.calendario td.pagada, .legend .pagada {
+    background-color: red;
+}
+
+.calendario input[type=checkbox] {
+	display: none;
+}
+
+.calendario .tabla-dia {
+  padding: 0 1ex;
+  text-align: right;
+  color: black;
+  background-color: #ffffff;
+  border-color: inherit;
+}
+
+.calendario tr:nth-child(even) .tabla-dia {
+    background-color: #e0e0e0;
+}
+
+.legend {
+  text-align: center;
+}
+
+.legend>li {
+  display: inline-block;
+}
+
+.legend span {
+	border: 1px solid gray;
+	padding: 0 3px;
+}
+
+div#days_table table {
+  margin: 5px;
+  padding: 0px;
+  outline-width: 0;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+div#selector {
+  overflow: auto;
+  border: groove;
+  padding: 5px;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+  background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+  background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.selector-actions{
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.calendar-actions{
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.rent-actions{
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}

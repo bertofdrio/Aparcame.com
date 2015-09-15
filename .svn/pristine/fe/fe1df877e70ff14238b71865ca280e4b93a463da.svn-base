@@ -1,0 +1,9 @@
+<tr>
+  <td><%= carpark.number %></td>
+  <td><%= number_to_euros carpark.price %></td>
+  <td><%= number_to_euros carpark.reduced_price %></td>
+  <td><%= carpark.description %></td>
+
+  <td><a class="pure-button" href="<%= carpark_path(carpark) %>"><i class="fa fa-eye"></i> <%= I18n.t('text.general.show') %></a></td>
+  <td><a class="pure-button" href="<%= calendar_carpark_path(carpark)%>"><i class="fa fa-calendar"></i> <%= I18n.t('text.general.calendar') %></a></td>
+</tr>

@@ -1,0 +1,254 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/rails.es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  "true": "Yes"
+  "false": "No"
+
+  text:
+    general:
+      show: "Show"
+      back: "Back"
+      delete: "Delete"
+      edit: 'Edit'
+      update: 'Update'
+      are_you_sure: 'Are you sure?'
+      carpark: "Carpark"
+      carparks: "Carparks"
+      rent: "Rent"
+      rents: "Rents"
+      bookings: "Bookings"
+      search: "Search"
+      new_model: "New %{name}"
+      did_you_mean: "Did you mean"
+      home: "Home"
+      faq: "Frequently asked questions"
+      use_conditions: "Use conditions"
+      private_policy: "Private policy"
+      contact: "Contact"
+      description: "Description"
+      calendar: "Calendar"
+      login: "Login"
+      sign_up: "Sign up"
+      logout: "Logout"
+      edit_profile: "Edit profile"
+      yes: "Yes"
+      no: "No"
+      ok: "OK"
+      successfully_destroyed: "%{name} was successfully destroyed."
+      successfully_updated: "%{name} was successfully updated."
+      successfully_created: "%{name} was successfully created."
+      unauthorized: 'Unauthorized'
+
+    booking:
+      cannot_edit: 'Cannot edit booking because has been paid'
+    transaction:
+      withdraw: 'Withdraw'
+    error:
+      model_errors:
+        one: "You have %{count} error"
+        other: "You have %{count} errors"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          invalid: 'invalid'
+        availability:
+          exists_booking: "cannot delete availalibity because a booking exists"
+          invalid_duration: "should be more than %{duration} minutes"
+          start_overlap: "should not be overlaps with other availabilities"
+          end_overlap: "should not be overlaps with other availabilities"
+          inner_overlap: "should not be inside other availability"
+          wrapper_overlap: "should not be overlaps with other availabilities"
+          attributes:
+            end_time:
+              not_same_day: "should be in the same day that start"
+            start_time:
+              start_before_end: "should be before end time"
+              invalid_margin_start: "should be at least two days in advance"
+        rent:
+          should_be_unique_carpark:  "should be unique for each carpark"
+        booking_time:
+          not_availabitity: "should exist an availability"
+          start_overlap: "should not be overlaps with other booking_times"
+          end_overlap: "should not be overlaps with other booking_times"
+          inner_overlap: "should not be inside other booking_time"
+          wrapper_overlap: "should not be overlaps with other booking_times"
+          already_paid: 'cannot delete booking_time because is already paid'
+          attributes:
+            end_time:
+              not_same_day: "should be in the same day that start"
+            start_time:
+              start_before_end: "should be before end time"
+              invalid_margin_start: "should be at least two days in advance"
+        booking:
+          not_enough_balance: 'has not enough balance'
+          already_paid: 'cannot edit because has booking_times already paid'
+          owner: 'cannot be the owner'
+          invalid: 'invalid'
+        transaction:
+          not_enough_balance: 'has not enough balance'
+          cannot_withdraw: 'cannot withdraw top_up or completed withdraw'
+
+    messages:
+      transaction:
+        reload_balance: 'PayPal Express Balance Reload'
+        reload_balance_description: 'PayPal Express Balance Reload, %{amount}'
+        withdraw_balance_description: 'Withdraw balance, %{amount}'
+        transaction_completed: 'Payment Transaction Completed'
+        transaction_canceled: 'Payment Request Canceled'
+        not_enough_balance: 'has not enough balance'
+        withdraw_balance_dispatched: "Withdraw balance successfully dispatched"
+
+    attributes:
+      user:
+        name: 'Name'
+        surname: 'Surname'
+        phone: 'Phone number'
+        license: 'License'
+        dni: 'Dni'
+      rent:
+        carpark_id: 'Carpark'
+      availability:
+        start_time: 'Start time'
+        end_time: 'End time'
+      transaction:
+        amount: 'Amount'
+      booking:
+        carpark: 'Carpark'
+        phone: 'Phone number'
+      carpark/bookings/booking_times:
+        availability: 'Booking time'
+
+    models:
+      availability:
+        one: 'Availability'
+        other: 'Availabilities'
+      user: 'User'
+      rent:
+        one: 'Rent'
+        other: 'Rents'
+      garage:
+        one: 'Garage'
+        other: 'Garages'
+      transaction:
+        one: 'Transaction'
+        other: 'Transactions'
+
+
+
+  views:
+    layout:
+      logged_in_as: 'Logged in as'
+    home:
+      next_bookings: 'Next bookings'
+    menu:
+      carparks: 'My carparks'
+      bookings: 'Bookings'
+      garages: 'Garages'
+      transactions: 'Balance'
+    calendar:
+      legend: 'Legend'
+      save_availabilities: "Save availabilities"
+      save_booking: "Save booking"
+      weekends: "Weekends"
+      workingdays: "Working days"
+      alldays: "All days"
+      clean: "Clean selection"
+      select_rents: "Select rents"
+      month_days: 'Days'
+      day_hours: 'Hours'
+      month_config: 'Month configuration'
+      delete_availabilities: 'Delete availabilities'
+      delete_month_availabilities: 'Delete month availabilities'
+    booking_calendar:
+      select_bookings: "Select bookings"
+      name: 'Name'
+      phone: 'Phone'
+      license: 'License plate'
+    carpark:
+      header_index: 'Listing carparks'
+      number: 'Number'
+      price: 'Price'
+      reduced_price: 'Reduced price'
+      description: 'Description'
+      profit: 'Profit'
+    garage:
+      index_header: 'Are you looking for a carpark?'
+      index_content: 'Tell us where you are looking for carpark:'
+      show_header: 'Garage information'
+      name: 'Name'
+      address: 'Addres'
+      city: 'City'
+      province: 'Province'
+      postal_code: 'Postal code'
+      image_gallery: 'Image gallery'
+      your_carparks: 'My carparks'
+      other_carparks: 'Other carparks'
+    bookings:
+      show_booking_times: "Show bookings times"
+      hide_booking_times: "Hide bookings times"
+      index_header: 'Listing bookings'
+      name: 'Name'
+      license: 'License'
+      phone: 'Phone'
+      price: 'Price'
+      reduced_price: 'Reduced price'
+      address: 'Address'
+      carpark: 'Carpark'
+    booking_times:
+      header_index: 'In the following times'
+      date: 'Date'
+      start_time: 'Start time'
+      end_time: 'End time'
+      amount: 'Amount'
+      paid: 'Paid'
+      delete: 'Delete'
+    rent:
+      name: 'Name'
+      availabilities: 'Availabilities'
+      date: 'Date'
+    transactions:
+      topup_balance: "Topup balance"
+      withdraw_balance: "Withdraw balance"
+      current_balance: 'Your current balance is'
+      not_committed_balance: 'Your not committed balance is'
+      date: 'Date'
+      type: 'Type'
+      status: 'Status'
+      description: 'Description'
+      amount: 'Amount'
+      dispatch: 'Dispatch'
+
+  emails:
+    booking_charge: 'Booking charge'
+    booking_profit: 'Booking profit'
+    new_booking: 'New booking'
+    update_booking: 'Booking updated'
+    delete_booking: 'Booking deleted'
+    booking_info: 'Booking info'
+    booking_ended: 'Booking ended'
+
+
+  movement_type:
+    top_up: 'Topup'
+    withdraw: 'Withdraw'

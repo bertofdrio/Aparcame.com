@@ -1,0 +1,7 @@
+</p>
+<h3>Información de acceso:</h3>
+Teléfono apertura: <%= @garage.phone %><br>
+Teléfono autorizado: <%= @booking.phone %><br>
+Matrícula: <%= @booking.license %><br>
+</p>
+

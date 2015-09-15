@@ -1,0 +1,23 @@
+<%= form_for @transaction, url: { action: "dispatch_pending_withdraw_balance" } do |f| %>
+    <%= render :partial => 'shared/error', :locals => { :item => @transaction } %>
+
+    <div class="field">
+      <%= f.label :movement_type %><br>
+      <%= f.text_field :movement_type, disabled: true  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :amount %><br>
+      <%= f.text_field :amount, disabled: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :status %><br>
+      <%= f.text_field :status, disabled: true %>
+    </div>
+
+    <div class="actions">
+      <button type="submit" name="commit"><%= I18n.t('views.transactions.dispatch') %></button>
+    </div>
+
+<% end %>

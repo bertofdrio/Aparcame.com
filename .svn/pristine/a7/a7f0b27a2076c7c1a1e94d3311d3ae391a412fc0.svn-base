@@ -1,0 +1,3 @@
+$("#booking_times<%= @booking.id %>").append("<%= escape_javascript(render(@booking_times)) %>");
+$("#button-show-booking_times<%= @booking.id %>").hide();
+$("#button-hide-booking_times<%= @booking.id %>").show();

@@ -1,0 +1,31 @@
+<h1><%= I18n.t('views.carpark.header_index') %></h1>
+
+<table class="pure-table" style="font-size: 12px;">
+  <thead>
+    <tr>
+      <th><%= I18n.t('views.carpark.number') %></th>
+      <th style="min-width: 40px"><%= I18n.t('views.carpark.price') %></th>
+      <th style="min-width: 40px"><%= I18n.t('views.carpark.reduced_price') %></th>
+      <th><%= Garage.model_name.human %></th>
+      <th>#</th>
+      <th>#</th>
+      <th>#</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carparks.each do |carpark| %>
+      <tr>
+        <td><%= carpark.number %></td>
+        <td><%= number_to_euros carpark.price %></td>
+        <td><%= number_to_euros carpark.reduced_price %></td>
+        <td><a class="pure-button" href="<%= garage_path(carpark.garage_id) %>"> <%= carpark.garage.name %></a></td>
+        <td><a class="pure-button" href="<%= url_for carpark%>"><i class="fa fa-eye"></i> <%= I18n.t('text.general.show') %></a></td>
+        <td><a class="pure-button" href="<%= calendar_carpark_path(carpark)%>"><i class="fa fa-calendar"></i> <%= I18n.t('text.general.calendar') %></a></td>
+        <td><a class="pure-button" href="<%= carpark_rents_path(carpark) %>"><i class="fa fa-tasks"></i> <%= I18n.t('text.general.rents') %></a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

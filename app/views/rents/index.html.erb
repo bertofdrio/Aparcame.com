@@ -1,0 +1,32 @@
+<h1><%= Rent.model_name.human(count: :many) %></h1>
+
+<table class="pure-table">
+  <thead>
+  <tr>
+    <th><%= I18n.t('views.rent.name') %></th>
+    <th><%= I18n.t('views.rent.availabilities') %></th>
+    <th>#</th>
+    <th>#</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @rents.each do |rent| %>
+      <tr>
+        <td><%= rent.name %></td>
+        <td><%= rent.availabilities.count %></td>
+        <td>
+          <a class="pure-button" href="<%= carpark_rent_path(@carpark, rent) %>"><i class="fa fa-eye"></i> <%= I18n.t('text.general.show') %>
+          </a></td>
+        <td>
+          <a class="pure-button" href="<%= calendar_carpark_path(@carpark) %>"><i class="fa fa-calendar fa"></i> <%= I18n.t('text.general.calendar') %>
+          </a></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br/>
+
+<a class="pure-button" href="<%= new_carpark_rent_path(@carpark) %>"><i class="fa fa-plus-circle fa-3x"></i></i> <%= I18n.t('text.general.new_model', :name => Rent.model_name.human.downcase) %>
+</a>

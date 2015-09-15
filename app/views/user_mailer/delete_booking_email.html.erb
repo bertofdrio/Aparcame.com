@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+
+<h1>Reserva eliminada</h1>
+
+<p>Se ha eliminado la siguiente reserva:</p>
+
+
+<%= render :partial => 'booking_email' %>
+
+<%= render :partial => 'booking_times_email' %>
+
+<p>
+  Importe Total: <%=  number_to_euros @booking.total_amount %>
+</p>
+
+</body>
+</html>

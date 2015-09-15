@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+
+<h1>Cobro de reserva</h1>
+
+<%= render :partial => 'booking_email' %>
+
+<%= render :partial => 'booking_client_email' %>
+
+<p>
+  <h3>Información de cobro</h3>
+  Fecha: <%= @booking_time.start_time.to_date %></br>
+  Horario: <%= @booking_time.start_time.strftime("%T") %> a <%= @booking_time.fixed_end_time.strftime("%T") %></br>
+  Importe: <%= number_to_euros @booking_time.total_amount %></br>
+</p>
+
+</body>
+</html>

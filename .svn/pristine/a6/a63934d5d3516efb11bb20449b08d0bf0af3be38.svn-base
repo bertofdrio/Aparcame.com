@@ -1,0 +1,34 @@
+#encoding: UTF-8
+
+  <div id="contacto">
+    <table>
+      <tr>
+        <td id="email">
+          <p><%= image_tag('contacto.png', :alt => 'E-mail') %></p>
+          <p>info&#64;aparcame&#46;com</p>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+    <div id="formularios">
+      <div id="propietarios">
+        <h2>¿Estás interesado en ofrecer tu plaza?</h2>
+        <p>Si lo prefieres, puedes indicarnos los datos de tu plaza y nosotros contactaremos contigo:</p>
+        <form action="/contacto" method="post">
+          <ul>
+            <li><label>Teléfono*: <input type="text" name="telefono"/></label></li>
+            <li><label>Dirección del garaje: <input type="text" name="direccion"/></label></li>
+            <li><label>Horario de plaza disponible: <input type="text" name="horario"/></label></li>
+            <li><label>Nombre: <input type="text" name="nombre"/></label></li>
+            <li><label>E-mail: <input type="text" name="email"/></label></li>
+            <li><input value="Enviar" type="submit" /></li>
+          </ul>
+          <div><input type="hidden" name="contacto" value="propietarios" /></div>
+        </form>
+      </div>
+      (*) Campo obligatorio
+    </div>
+
+
+  </div>

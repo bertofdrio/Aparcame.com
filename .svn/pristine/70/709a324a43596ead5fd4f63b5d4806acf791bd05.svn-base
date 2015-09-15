@@ -1,0 +1,56 @@
+<% content_for :custom_javascript do %>
+    <%= javascript_include_tag "address_converter", 'data-turbolinks-track' => true %>
+<% end %>
+
+<h1><%= I18n.t('views.bookings.index_header') %></h1>
+
+<table class="pure-table">
+  <thead>
+  <tr>
+    <th><%= I18n.t('views.bookings.name') %></th>
+    <th><%= I18n.t('views.bookings.license') %></th>
+    <th><%= I18n.t('views.bookings.phone') %></th>
+    <th><%= I18n.t('views.bookings.address') %></th>
+    <th><%= I18n.t('views.bookings.carpark') %></th>
+    <th>#</th>
+    <th>#</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.name %></td>
+        <td><%= booking.license %></td>
+        <td><%= booking.phone %></td>
+        <td><address><%= "%s, %s, %s" % [booking.carpark.garage.address, booking.carpark.garage.city, booking.carpark.garage.province.name] %></address></td>
+        <td>
+          <a class="pure-button" href="<%= carpark_path(booking.carpark) %>"><i class="fa fa-calendar"></i> <%= I18n.t('text.general.show') %>
+          </a></td>
+        <td>
+          <a class="pure-button" href="<%= booking_path(booking) %>" data-method="delete"><i class="fa fa-trash-o"></i> <%= I18n.t('text.general.delete') %>
+          </a></td>
+        <td>
+          <% if booking.can_edit? %>
+            <a class="pure-button" href="<%= edit_booking_path(booking) %>"><i class="fa fa-pencil"></i> <%= I18n.t('text.general.edit') %></a>
+          <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="8">
+          <a class="pure-button" data-method="post" href="<%= show_booking_times_booking_path(booking) %>" data-remote="true" id="<%= "button-show-booking_times%s" % [booking.id] %>"><i class="fa fa-plus-square-o"></i> <%= I18n.t('views.bookings.show_booking_times') %></a>
+          <a class="pure-button" data-method="post" href="<%= hide_booking_times_booking_path(booking) %>" data-remote="true" style="display: none;" id="<%= "button-hide-booking_times%s" % [booking.id] %>"><i class="fa fa-minus-square-o"></i> <%= I18n.t('views.bookings.hide_booking_times') %></a>
+          <table>
+            <thead>
+            </thead>
+            <tbody id="booking_times<%= booking.id %>"></tbody>
+          </table>
+        </td>
+      </tr>
+
+  <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -1,0 +1,32 @@
+<table class="pure-table">
+  <thead>
+  <tr>
+    <th><%= I18n.t('views.booking_times.date') %></th>
+    <th><%= I18n.t('views.booking_times.start_time') %></th>
+    <th><%= I18n.t('views.booking_times.end_time') %></th>
+    <th><%= I18n.t('views.booking_times.amount') %></th>
+    <th><%= I18n.t('views.booking_times.paid') %></th>
+    <th><%= I18n.t('views.booking_times.delete') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+
+  <% @booking_times.each do |booking_time| %>
+      <tr>
+        <td><%= booking_time.start_time.to_date %></td>
+        <td><%= booking_time.start_time.strftime("%T") %></td>
+        <td><%= booking_time.fixed_end_time.strftime("%T") %></td>
+        <td><%= number_to_euros booking_time.total_amount %></td>
+        <td><%= I18n.t(booking_time.paid?.to_s) %></td>
+        <td>
+          <% if !booking_time.paid? %>
+              <a class="pure-button" href="<%= booking_booking_time_path(booking_time.booking, booking_time) %>" data-method="delete" data-confirm="<%= I18n.t('text.general.are_you_sure') %>"><i class="fa fa-trash-o"></i> <%= I18n.t('text.general.delete') %>
+              </a>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

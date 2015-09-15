@@ -1,0 +1,45 @@
+<p>
+  <strong><%= I18n.t('views.carpark.number') %>:</strong>
+  <%= @carpark.number %>
+</p>
+
+<p>
+  <strong><%= I18n.t('views.carpark.price') %>:</strong>
+  <%= number_to_euros(@carpark.price) %>
+</p>
+
+<p>
+  <strong><%= I18n.t('views.carpark.reduced_price') %>:</strong>
+  <%= number_to_euros(@carpark.reduced_price) %>
+</p>
+
+<p>
+  <strong><%= I18n.t('views.carpark.description') %>:</strong>
+  <%= @carpark.description %>
+</p>
+
+<% if @carpark.user == current_user %>
+<p>
+  <strong><%= I18n.t('views.carpark.profit') %>:</strong>
+  <%= number_to_euros(@carpark.profit) %>
+</p>
+<% end %>
+
+</br>
+<a class="pure-button" href="<%= garage_path(@carpark.garage_id) %>"><i class="fa fa-map-marker fa-3x"></i> <%= Garage.model_name.human %>
+</a>
+
+<a class="pure-button" href="<%= calendar_carpark_path(@carpark) %>"><i class="fa fa-calendar fa-3x"></i> <%= I18n.t('text.general.calendar') %>
+</a>
+<% if @carpark.user == current_user %>
+    <a class="pure-button" href="<%= carpark_rents_path(@carpark) %>"><i class="fa fa-tasks fa-3x"></i> <%= I18n.t('text.general.rents') %>
+    </a>
+<% end %>
+
+<% if @carpark.user != current_user %>
+    <a class="pure-button" href="<%= bookings_path() %>"><i class="fa fa-car fa-3x"></i></i> <%= I18n.t('text.general.bookings') %>
+    </a>
+<% end %>
+
+<a class="pure-button" href="<%= carparks_path %>"><i class="fa fa-reply fa-3x"></i> <%= I18n.t('text.general.back') %>
+</a>

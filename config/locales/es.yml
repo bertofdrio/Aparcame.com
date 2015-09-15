@@ -1,0 +1,253 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/rails.es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  "true": "Si"
+  "false": "No"
+
+  text:
+    general:
+      show: "Mostrar"
+      back: "Volver"
+      delete: "Borrar"
+      edit: 'Editar'
+      update: 'Actualizar'
+      are_you_sure: '¿Esta usted seguro?'
+      carpark: "Plaza de garaje"
+      carparks: "Plazas de garaje"
+      rent: "Alquiler"
+      rents: "Alquileres"
+      bookings: "Reservas"
+      search: "Buscar"
+      new_model: "Nuevo %{name}"
+      did_you_mean: "Quiere decir"
+      home: "Inicio"
+      faq: "FAQ"
+      use_conditions: "Condiciones de uso"
+      private_policy: "Política de privacidad"
+      contact: "Contacto"
+      description: "Descripción"
+      calendar: "Calendario"
+      login: "Inicio de sesión"
+      sign_up: "Registro"
+      logout: "Salir"
+      edit_profile: "Editar perfil"
+      yes: "Si"
+      no: "No"
+      ok: "OK"
+      successfully_destroyed: "%{name} fue borrado correctamente."
+      successfully_updated: "%{name} fue actualizado correctamente."
+      successfully_created: "%{name} fue creado correctamente."
+      unauthorized: 'No está autorizado'
+
+    booking:
+      cannot_edit: 'No se puede editar la reserva porque ha sido pagada'
+    transaction:
+      withdraw: 'Retirar'
+    error:
+      model_errors:
+        one: "Tiene %{count} error"
+        other: "Tiene %{count} errores"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          invalid: 'no válido'
+        availability:
+          exists_booking: "no puede borrar porque contiene una reserva"
+          invalid_duration: "debe de ser de al menos %{duration} minutos"
+          start_overlap: "no puede solaparse con otros intervalos"
+          end_overlap: "no puede solaparse con otros intervalos"
+          inner_overlap: "no puede solaparse con otros intervalos"
+          wrapper_overlap: "no puede solaparse con otros intervalos"
+          attributes:
+            end_time:
+              not_same_day: "debe ser en el mismo día que el tiempo de inicio"
+            start_time:
+              start_before_end: "debe ser antes del tiempo de inicio"
+              invalid_margin_start: "debe ser con dos días de antelación"
+        rent:
+          should_be_unique_carpark:  "debe ser único para cada plaza de garaje"
+        booking_time:
+          not_availabitity: "debe existir una disponibilidad"
+          start_overlap: "no puede solaparse con otros intervalos"
+          end_overlap: "no puede solaparse con otros intervalos"
+          inner_overlap: "no puede solaparse con otros intervalos"
+          wrapper_overlap: "no puede solaparse con otros intervalos"
+          already_paid: 'no se puede borrar el intervalo porque ya ha sido pagado'
+          attributes:
+            end_time:
+              not_same_day: "debe ser en el mismo día que el tiempo de inicio"
+            start_time:
+              start_before_end: "debe ser antes del tiempo de inicio"
+              invalid_margin_start: "debe ser con dos días de antelación"
+        booking:
+          not_enough_balance: 'no tiene suficiente saldo'
+          already_paid: 'no se puede editar porque contiene intervalos que han sido pagados'
+          owner: 'no puede ser el propietario '
+          invalid: 'no válido'
+        transaction:
+          not_enough_balance: 'no tiene suficiente saldo'
+          cannot_withdraw: 'no puede retirar una recarga o una retirada de saldo ya completada'
+
+    messages:
+      transaction:
+        reload_balance: 'PayPal Express Recarga de Saldo'
+        reload_balance_description: 'PayPal Express Recarga de Saldo, %{amount}'
+        withdraw_balance_description: 'Retirada de saldo, %{amount}'
+        transaction_completed: 'Pago Completado'
+        transaction_canceled: 'Pago Cancelado'
+        not_enough_balance: 'no tiene suficiente saldo'
+        withdraw_balance_dispatched: "Retirada de saldo atendida correctamente"
+
+    attributes:
+      user:
+        name: 'Nombre'
+        surname: 'Apellidos'
+        phone: 'Número de teléfono'
+        license: 'Matrícula'
+        dni: 'Dni'
+      rent:
+        carpark_id: 'Plaza'
+      availability:
+        start_time: 'Comienzo'
+        end_time: 'Fin'
+      transaction:
+        amount: 'Cantidad'
+      booking:
+        carpark: 'Plaza'
+        phone: 'Número de teléfono'
+      carpark/bookings/booking_times:
+        availability: 'Reserva'
+
+    models:
+      availability:
+        one: 'Disponibilidad'
+        other: 'Disponibilidades'
+      user: 'Usuario'
+      rent:
+        one: 'Alquiler'
+        other: 'Alquileres'
+      garage:
+        one: 'Garaje'
+        other: 'Garajes'
+      transaction:
+        one: 'Movimiento de saldo'
+        other: 'Movimientos de saldo'
+
+
+  views:
+    layout:
+      logged_in_as: 'Iniciada sesión como'
+    home:
+      next_bookings: 'Próximas reservas'
+    menu:
+      carparks: 'Mis plazas'
+      bookings: 'Reservas'
+      garages: 'Garajes'
+      transactions: 'Saldo'
+    calendar:
+      legend: 'Leyenda'
+      save_availabilities: "Guardar disponibilidades"
+      save_booking: "Guardar reserva"
+      weekends: "Fines de semana"
+      workingdays: "Días laborables"
+      alldays: "Todos los días"
+      clean: "Limpiar selección"
+      select_rents: "Seleccionar alquileres"
+      month_days: 'Días'
+      day_hours: 'Horas'
+      month_config: 'Configuración mensual'
+      delete_availabilities: 'Borrar disponibilidades'
+      delete_month_availabilities: 'Borrar disponibilidades del mes'
+    booking_calendar:
+      select_bookings: "Seleccionar reservas"
+      name: 'Nombre'
+      phone: 'Teléfono'
+      license: 'Matrícula'
+    carpark:
+      header_index: 'Listado de plazas'
+      number: 'Número'
+      price: 'Tarifa'
+      reduced_price: 'Tarifa reducida'
+      description: 'Descripción'
+      profit: 'Beneficio'
+    garage:
+      index_header: '¿Estás buscando una plaza de aparcamiento?'
+      index_content: 'Dinos dónde estas buscando una plaza de aparcamiento:'
+      show_header: 'Información de garaje'
+      name: 'Nombre'
+      address: 'Dirección'
+      city: 'Ciudad'
+      province: 'Provincia'
+      postal_code: 'Código postal'
+      image_gallery: 'Imágenes'
+      your_carparks: 'Mis plazas'
+      other_carparks: 'Otras plazas'
+    bookings:
+      show_booking_times: "Mostrar intervalos de reserva"
+      hide_booking_times: "Ocultas intervalos de reserva"
+      index_header: 'Reservas'
+      name: 'Nombre'
+      license: 'Matrícula'
+      phone: 'Teléfono'
+      price: 'Tarifa'
+      reduced_price: 'Tarifa reducida'
+      address: 'Dirección'
+      carpark: 'Plaza'
+    booking_times:
+      header_index: 'En las siguientes horas'
+      date: 'Fecha'
+      start_time: 'Hora de inicio'
+      end_time: 'Hora de fin'
+      amount: 'Cantidad'
+      paid: '¿Pagado?'
+      delete: 'Borrar'
+    rent:
+      name: 'Nombre'
+      availabilities: 'Disponibilidades'
+      date: 'Fecha'
+    transactions:
+      topup_balance: "Recargar saldo"
+      withdraw_balance: "Retirar saldo"
+      current_balance: 'Su saldo actual es'
+      not_committed_balance: 'Su saldo no comprometido es'
+      date: 'Fecha'
+      type: 'Tipo'
+      status: 'Estado'
+      description: 'Descripción'
+      amount: 'Cantidad'
+      dispatch: 'Atender'
+
+  emails:
+    booking_charge: 'Cobro de reserva'
+    booking_profit: 'Pago de reserva'
+    new_booking: 'Nueva reserva'
+    update_booking: 'Reservas actualizada'
+    delete_booking: 'Reserva borrada'
+    booking_info: 'Información de reserva'
+    booking_ended: 'Reserva finalizada'
+
+
+  movement_type:
+    top_up: 'Recarga'
+    withdraw: 'Retirada'

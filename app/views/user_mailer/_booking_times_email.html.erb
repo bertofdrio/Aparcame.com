@@ -1,0 +1,25 @@
+<h2><%= I18n.t('views.booking_times.header_index') %></h2>
+
+<table class="pure-table">
+  <thead>
+  <tr>
+    <th><%= I18n.t('views.booking_times.date') %></th>
+    <th><%= I18n.t('views.booking_times.start_time') %></th>
+    <th><%= I18n.t('views.booking_times.end_time') %></th>
+    <th><%= I18n.t('views.booking_times.amount') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+
+  <% @booking_times.each do |booking_time| %>
+      <tr>
+        <td><%= booking_time.start_time.to_date %></td>
+        <td><%= booking_time.start_time.strftime("%T") %></td>
+        <td><%= booking_time.fixed_end_time.strftime("%T") %></td>
+        <td><%= number_to_euros booking_time.total_amount %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

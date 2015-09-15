@@ -1,0 +1,141 @@
+#encoding: UTF-8
+
+  ﻿<div id="faq">
+
+  <div id="descripcion">
+    <h1>Preguntas frecuentes (FAQ)</h1>
+    <ul id="faq-menu">
+      <li><a href="#propietario">Soy propietario de una plaza</a></li>
+      <li><a href="#reserva">Quiero reservar una plaza</a></li>
+    </ul>
+    <br /><br /><br />
+  </div>
+
+  <dl>
+
+    <dt>¿A quién beneficia el sistema aparcame.com?</dt>
+    <dd>aparcame.com es una fórmula original que, gracias a su sistema patentado, es capaz de beneficiar a personas que habitualmente tienen problemas de aparcamiento y a propietarios de plazas de garaje. La idea es sencilla: mientras el propietario no tiene su coche en su plaza de aparcamiento (por ejemplo, mientras está trabajando), un usuario puede reservar y utilizar esa misma plaza. El propietario gana un dinero cómodamente y con total seguridad, y el usuario que reserva la plaza consigue un aparcamiento económico y con importantes ventajas respecto a la zona azul y los parkings privados. Los accesos a la plaza a través del portón de la comunidad de vecinos se producen con un sistema patentado por aparcame.com que permite abrir el garaje a través de una llamada gratuita del usuario registrado a un número de teléfono.</dd>
+
+
+    <dt>¿El servicio de atención al cliente de aparcame.com utiliza automatismos de voz?</dt>
+    <dd>No, cuando usted llame a aparcame.com le atenderá una persona desde el primer momento. No le haremos perder el tiempo pulsando teclas con opciones o grabando mensajes, le atenderemos directamente para resolver todos sus problemas o dudas.</dd>
+
+  </dl>
+
+  <h2 id="propietario">Propietarios</h2>
+
+  <dl>
+
+
+    <dt>¿Qué tengo que hacer para registrar mi plaza de aparcamiento?</dt>
+    <dd>A través del teléfono 984 11 37 63 una persona se encargará de tomar los datos de su plaza y solicitará a su comunidad de vecinos la autorización para la instalación del sistema de apertura del portón del garaje de su comunidad (gratuito hasta septiembre de 2010). Para garantizar su anonimato, en ningún momento se facilitarán sus datos a su comunidad de vecinos, por lo que en la petición de la autorización sólo interviene aparcame.com. El dispositivo de apertura del portón que instala aparcame.com es paralelo y compatible con el que ya existe en su comunidad, y es inocuo para el funcionamiento del portón. Una vez instalado, registraremos su plaza y, desde ese mismo instante, podrá empezar a ganar dinero con ella.</dd>
+
+
+
+    <dt>¿Puede averiarse el portón de acceso como consecuencia del uso de este sistema?</dt>
+    <dd>El dispositivo de apertura actúa sobre el sistema de subida del portón de la misma forma que un mando de apertura, sin que interfiera en ninguna otra parte de su mecanismo, por lo que no pueden producirse averías como consecuencia de la instalación de nuestros aparatos. Las averías de cada portón son, por tanto, ajenas a aparcame.com</dd>
+
+
+
+    <dt>¿Por cuánto tiempo se ha de firmar el contrato de cesión de mi plaza? </dt>
+    <dd>El contrato se firma por tiempo indefinido, pero en cualquier momento puede extinguirse, siempre y cuando se respete el plazo de preaviso de tres meses.</dd>
+
+
+
+    <dt>¿Qué ocurre si llego a mi garaje después del trabajo y me encuentro con un vehículo en mi plaza?</dt>
+    <dd>Aparcame.com contempla un sistema de compensaciones para los propietarios de las plazas que esta basado en la penalización del usuario que haya incumplido los tiempos estipulados, la cuantía con la que el usuario compensará al propietario será de dos veces el valor del tiempo excedido. Esta cantidad se ingresará íntegramente en la cuenta del propietario de la plaza.</dd>
+
+
+
+    <dt>Ya he visto el mismo coche en mi plaza durante 3 días fuera de plazo ¿Qué puedo hacer?</dt>
+    <dd>Cada vez que aparezca un vehículo en su plaza fuera del horario estipulado puede notificarlo al servicio de atención al cliente de aparcame.com para verificar el modelo y matrícula. Una vez identificado el usuario que está ocupando de forma reiterativa la plaza se le enviará una advertencia. En caso de reincidir, aparcame.com se reservara el derecho de dar de baja a dicho usuario del sistema de forma definitiva.</dd>
+
+
+
+    <dt>¿Puedo saber con anticipación cuando va a estar mi plaza ocupada?</dt>
+    <dd>Una vez que ha definido los horarios y el calendario en el que aparcame.com puede ofrecer su plaza, desde su espacio de usuario en la página web de aparcame.com puede acceder a un registro en el que aparecen los accesos que ha recibido su plaza y las reservas que se han formalizado hasta ese momento.</dd>
+
+
+
+    <dt>Si durante el tiempo que tengo estipulado que se cede a aparcame.com necesito aparcar momentáneamente en mi plaza. ¿Puedo hacerlo? ¿Cómo puedo cancelar la disponibilidad de mi plaza temporalmente?</dt>
+    <dd>A través la web puede ampliar o reducir el horario disponible siempre que lo considere oportuno. En el caso de que su plaza ya esté reservada por otro usuario, la cancelación de dicha reserva sólo podrá realizarse mediante una llamada al número de atención al cliente de aparcame.com.</dd>
+
+
+
+    <dt>Me quiero dar de baja (definitiva). ¿Tendría problemas de que luego siguieran aparcando vehículos en mi plaza?</dt>
+    <dd>No, una vez que usted nos comunique la indisponibilidad de su plaza, el sistema la pondrá en suspenso. No obstante, existe un plazo de preaviso de tres meses para que usted comunique la baja de su plaza.</dd>
+
+
+  </dl>
+
+  <h2 id="reserva">Reservas</h2>
+  <dl>
+
+
+    <dt>¿Cómo reservo un plaza para aparcar?</dt>
+    <dd>A través de la web www.aparcame.com puede registrarse como usuario y hacer una búsqueda por ciudad y zona para comprobar qué plazas de garaje están próximas a la calle a la que usted va y en qué horarios están disponibles. Cargando saldo en su cuenta de usuario podrá reservar las plazas que desee y, desde ese instante, empezar a ahorrar dinero de una manera cómoda y segura.</dd>
+
+
+
+    <dt>Además del ahorro, ¿qué otras ventajas me proporciona aparcame.com?</dt>
+    <dd>Las ventajas de aparcame.com van mucho más allá del ahorro. Estas son sólo algunas:
+      <ol>
+        <li>Elimina los tiempos de búsqueda de sitio para aparcar.</li>
+        <li>Elimina el peligro de dejar el coche en determinadas calles no seguras.</li>
+        <li>Elimina el riesgo de que la grúa se lleve el vehículo porque hemos tenido que aparcarlo en zona prohibida.</li>
+        <li>Evita las molestias de renovación de ticket de la zona azul y las posibles sanciones por retrasarnos en renovar el ticket.</li>
+        <li>Aporta la tranquilidad de tener una plaza reservada para aparcar, evitando retrasos en la entrada al trabajo, reuniones,...</li>
+        <li>Permite aparcar en zonas de la ciudad que habitualmente no disponen de espacio para aparcamientos en la calle.</li>
+      </ol>
+    </dd>
+
+
+
+    <dt>¿Cuánto cuesta utilizar aparcame.com?</dt>
+    <dd>Los servicios de registro, búsquedas, cancelaciones o bajas son gratuitos siempre que se realicen dentro de los términos de contratación. Aparcame.com sólo le cobra cuando utiliza una plaza de aparcamiento. Todas las plazas llevan las mismas tarifas, y éstas varían en función del tiempo que usted reserve. El coste es menor que el de un parking o el de una zona azul, y más si reserva su plaza durante periodos largos (en la misma o en distinta franja horaria). Utilice la herramienta que ponemos a su disposición en www.aparcame.com para calcular cuánto le costarían sus reservas.</dd>
+
+
+
+    <dt>¿Cómo pago por utilizar aparcame.com?</dt>
+    <dd>A través de su registro de usuario puede agregar saldo disponible para reservas siguiendo las instrucciones que le marca la web.</dd>
+
+
+
+    <dt>¿Cuánto tiempo pasa desde que me inscribo como usuario hasta que puedo empezar a reservar una plaza?</dt>
+    <dd>Desde el mismo momento que se inscribe como usuario podrá realizar la reserva de cualquier plaza que vea disponible y realizar un ingreso por cualquiera de los medios de pago disponibles.</dd>
+
+
+
+    <dt>¿Con cuánta anticipación puedo hacer una reserva de plaza? </dt>
+    <dd>Si es necesario puede realizar la reserva desde el mismo portón del garaje con su móvil o cualquier dispositivo que tenga acceso a Internet, accediendo a la plaza en cuestión de minutos.</dd>
+
+
+
+    <dt>¿Cómo entro y salgo con mi vehículo del garaje que seleccione? </dt>
+    <dd>Cuando haga la reserva de la plaza se le suministrará un numero de teléfono. Cuando esté delante del portón de la plaza que reservó, deberá llamar al número suministrado y el portón se abrirá. Este proceso no le producirá gasto alguno. Para salir tendrá que repetir la misma operación.</dd>
+
+
+
+    <dt>Me he pasado del tiempo reservado y ahora no me abre el garaje, ¿cómo recojo mi coche? ¿Qué pasa si no me habré el portón?</dt>
+    <dd>Póngase en contacto con el servicio de atención al cliente para que reactiven su número de teléfono y pueda salir.</dd>
+
+
+
+    <dt>Tengo una reserva confirmada y cuando llego a la plaza hay otro vehículo estacionado.</dt>
+    <dd>Póngase en contacto con el servicio de atención al cliente, comunique el número de matricula del vehículo y aparcame.com le reubicará.</dd>
+
+
+
+    <dt>Si tengo reservada una plaza por un mes y por razones de salud no voy a hacer uso de ella por una semana. ¿Pierdo el dinero de la reserva?</dt>
+    <dd>Podrá cancelar con una semana de antelación las horas que aún tenga reservadas. En caso contrario asumirá los gastos generados por la anulación de dichas reservas.</dd>
+
+
+
+    <dt>¿Por dónde entro y salgo a pie del garaje?</dt>
+    <dd>Por las entradas y salidas señalizadas para peatones. En caso de que no existan, podrá entrar y salir a través del portón de entrada de los automóviles utilizando el mismo proceso que utilizó para entrar en el garaje con su vehículo.</dd>
+
+
+  </dl>
+
+</div>
+

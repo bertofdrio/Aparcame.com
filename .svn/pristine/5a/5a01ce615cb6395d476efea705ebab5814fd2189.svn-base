@@ -1,0 +1,154 @@
+#init {
+  background: image_url("homelogo.png") no-repeat;
+}
+
+#init #phone {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  margin: 1em;
+}
+
+#init #main {
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.trade {
+  font-weight: bold;
+}
+
+#registerbutton {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+#registerbutton img {
+  width: 72px;
+  height: 72px;
+  border: none;
+  vertical-align: middle;
+}
+
+#registerbutton a {
+  font-size: 16pt;
+  padding: 0.5em;
+}
+
+#description,
+.description {
+  min-height: 250px;
+  margin-left: 250px;
+}
+
+#descripcion,
+.descripcion {
+  min-height: 250px;
+  margin-left: 250px;
+}
+
+#descripcion li,
+.descripcion li {
+  margin-bottom: 1em;
+}
+
+#descripcion h2,
+.descripcion h2 {
+  color: #A0A0A0;
+}
+
+#funcionamiento {
+  background: image_url('gears.png') no-repeat;
+}
+
+#alquiler {
+  background: image_url('tool1.png') no-repeat;
+}
+
+#alta {
+  background: image_url('tool1.png') no-repeat;
+}
+
+#ventajas {
+  background: image_url('thumbsup.png') no-repeat;
+}
+
+#contacto #denominacion {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#contacto table {
+  width: 100%;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  border-style: none;
+  font-size: 16pt;
+}
+
+#contacto #email p {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+#contacto form {
+  margin-right: 33%;
+}
+
+#contacto input[type=text] {
+  width: 15em;
+}
+
+#contacto ul {
+  list-style-type: none;
+}
+
+#contacto li {
+  text-align: right;
+  margin-bottom: 2px;
+}
+
+#contacto h2 {
+  color: #A0A0A0;
+}
+
+#faq {
+  background: image_url('thinking.png') no-repeat;
+}
+
+#sesion {
+  background: image_url('euro.png') no-repeat;
+}
+
+#faq h2 {
+  color: #A0A0A0;
+  padding-top: 1em;
+  margin: 1em 0;
+  border-top: thin solid gray;
+}
+
+#faq ul {
+  margin: 0;
+  padding: 0;
+}
+
+#faq ul li {
+  margin: 2em;
+  padding: 0;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#faq dl {
+  clear: both;
+}
+
+#faq dt {
+  font-weight: bold;
+}
+
+#faq dd {
+  margin-bottom: 1em;
+}
+
+
